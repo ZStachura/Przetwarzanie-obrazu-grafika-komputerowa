@@ -1,0 +1,53 @@
+﻿<Window x:Class="Laboratorium_4_5.ColorChange.ColorChangeDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratorium_4_5.ColorChange"
+        mc:Ignorable="d"
+         Title="Change Color" Height="220" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Red" Height="30" Margin="10" FontSize="20" Width="60" />
+                    <TextBox Name="RedValue" Width="75" Height="30" Margin="10" TextChanged="ValueChange" PreviewTextInput="NumberValidationTextBox" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Hue" Height="30" Margin="10" FontSize="20" Width="60" />
+                    <TextBox Name="HueValue" Width="75" Height="30" Margin="10" PreviewTextInput="NumberValidationTextBox" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Green" Height="30" Margin="10" FontSize="20" Width="90" />
+                    <TextBox Name="GreenValue" Width="75" Height="30" Margin="10" TextChanged="ValueChange" PreviewTextInput="NumberValidationTextBox" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Saturation" Height="30" Margin="10" FontSize="20" Width="90" />
+                    <TextBox Name="SaturationValue" Width="75" Height="30" Margin="10" PreviewTextInput="NumberValidationTextBox" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Blue" Height="30" Margin="10" FontSize="20" Width="90" />
+                    <TextBox Name="BlueValue" Width="75" Height="30" Margin="10" TextChanged="ValueChange" PreviewTextInput="NumberValidationTextBox" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Value" Height="30" Margin="10" FontSize="20" Width="90" />
+                    <TextBox Name="ValueValue" Width="75" Height="30" Margin="10" PreviewTextInput="NumberValidationTextBox" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Button Grid.Row="1" Margin="10" Background="Beige" Height="40" Width="90" Click="CloseDialog">Change color</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Laboratorium_4_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratorium_4_5"
+        mc:Ignorable="d"
+        Title="Laboratory 4-5" Height="450" Width="800" FocusManager.FocusedElement="{Binding ElementName=paintSurface}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+        <Canvas Name="paintSurface" MouseDown="Canvas_MouseDown_1" MouseMove="Canvas_MouseMove_1">
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Canvas.Background>
+        </Canvas>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button Width="100" Background="Beige" Click="ChangeColor">change color</Button>
+            <Button Width="75" Background="Beige" Click="FreeDraw">free draw</Button>
+            <Button Width="50" Background="Beige" Click="Line">line</Button>
+            <Button Width="50" Background="Beige" Click="Square">square</Button>
+            <Button Width="75" Background="Beige" Click="Rectangle">rectangle</Button>
+            <Button Width="50" Background="Beige" Click="Polygon">polygon</Button>
+            <Button Width="50" Background="Beige" Click="Circle">circle</Button>
+            <Button Width="50" Background="Beige" Click="Rubber">rubber</Button>
+            <Button Width="75" Background="Beige" Click="DragLine">drag line</Button>
+            <Button Width="50" Background="Beige" Click="Clear">clear</Button>
+        </StackPanel>
+    </Grid>
+</Window>
